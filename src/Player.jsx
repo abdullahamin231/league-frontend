@@ -12,7 +12,11 @@ const AllPlayers = ({setShowPlayers, squadName}) => {
     useEffect(()=>{
         const fetchData = async () => {
             try {
-                const response = await fetch(`https://www.premierleaguebackend.up.railway.app/search?squad=${squadName}`, { mode: 'cors' });
+                const response = await fetch(`https://www.premierleaguebackend.up.railway.app/search?squad=${squadName}`, { method: 'GET',
+                mode: 'cors',
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                } });
                 const pl = await response.json();
     
                 if (!response.ok) {
