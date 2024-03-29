@@ -37,9 +37,6 @@ const Player = ({ setShowPlayers, squadName }) => {
                 const response = await fetch(`https://www.premierleaguebackend.up.railway.app/players/search?squad=${encodeURIComponent(squadName)}`, {
                     method: 'GET',
                     mode: 'cors',
-                    headers: {
-                        'Access-Control-Allow-Origin': '*'
-                    }
                 });
                 const pl = await response.json();
 
@@ -98,9 +95,6 @@ export default function Squads() {
             const response = await fetch(url, {
                 method: 'GET',
                 mode: 'cors',
-                headers: {
-                    'Access-Control-Allow-Origin': '*'
-                }
             });
             const pl = await response.json();
 

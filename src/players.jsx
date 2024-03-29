@@ -25,9 +25,7 @@ export default function Players() {
         try {
             const response = await fetch(url, { method: 'GET',
             mode: 'cors',
-            headers: {
-                'Access-Control-Allow-Origin': '*'
-            } });
+            });
             const pl = await response.json();
 
             if (!response.ok) {

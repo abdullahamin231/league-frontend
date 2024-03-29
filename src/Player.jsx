@@ -14,9 +14,7 @@ const AllPlayers = ({setShowPlayers, squadName}) => {
             try {
                 const response = await fetch(`https://www.premierleaguebackend.up.railway.app/search?squad=${squadName}`, { method: 'GET',
                 mode: 'cors',
-                headers: {
-                    'Access-Control-Allow-Origin': '*'
-                } });
+                 });
                 const pl = await response.json();
     
                 if (!response.ok) {
@@ -67,7 +65,7 @@ export default function Player() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch(`https://www.premierleaguebackend.up.railway.app/${first}/${last}`, { mode: 'cors' });
+            const response = await fetch(`https://www.premierleaguebackend.up.railway.app/${first}/${last}`, { mode: 'cors', method: 'GET' });
             const pl = await response.json();
 
             if (!response.ok) {
