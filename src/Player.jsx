@@ -12,7 +12,7 @@ const AllPlayers = ({setShowPlayers, squadName}) => {
     useEffect(()=>{
         const fetchData = async () => {
             try {
-                const response = await fetch(`https://www.premierleaguebackend.up.railway.app/search?squad=${squadName}`, { method: 'GET',
+                const response = await fetch(`https://premierleaguebackend.up.railway.app/search?squad=${squadName}`, { method: 'GET',
                 mode: 'cors',
                  });
                 const pl = await response.json();
@@ -65,7 +65,7 @@ export default function Player() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch(`https://www.premierleaguebackend.up.railway.app/${first}/${last}`, { mode: 'cors', method: 'GET' });
+            const response = await fetch(`https://premierleaguebackend.up.railway.app/${first}/${last}`, { mode: 'cors', method: 'GET' });
             const pl = await response.json();
 
             if (!response.ok) {

@@ -41,13 +41,13 @@ export default function Players() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const url = `https://www.premierleaguebackend.up.railway.app/players/search?${query}=${choice}`
+        const url = `https://premierleaguebackend.up.railway.app/players/search?${query}=${choice}`
         setLoading(true)
         fetchData(url);
     }
 
     useEffect(() => {
-        fetchData('https://www.premierleaguebackend.up.railway.app/players');
+        fetchData('https://premierleaguebackend.up.railway.app/players');
     }, []);
 
     

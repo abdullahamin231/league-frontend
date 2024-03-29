@@ -34,7 +34,7 @@ const Player = ({ setShowPlayers, squadName }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`https://www.premierleaguebackend.up.railway.app/players/search?squad=${encodeURIComponent(squadName)}`, {
+                const response = await fetch(`https://premierleaguebackend.up.railway.app/players/search?squad=${encodeURIComponent(squadName)}`, {
                     method: 'GET',
                     mode: 'cors',
                 });
@@ -110,7 +110,7 @@ export default function Squads() {
     };
 
     useEffect(() => {
-        fetchSquads('https://www.premierleaguebackend.up.railway.app/squads');
+        fetchSquads('https://premierleaguebackend.up.railway.app/squads');
     }, []);
 
     if (error) {
